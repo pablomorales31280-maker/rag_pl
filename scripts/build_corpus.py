@@ -17,7 +17,7 @@ def main():
                 raw = z.read(path).decode("utf-8", errors="ignore")
                 doc = parse_html_page(raw, source_file=path)
 
-                # Si pas d'URL canonique, on garde au moins le fichier
+                # Si pas d'URL canonique, garde au moins le fichier
                 if not doc["source_url"]:
                     doc["source_url"] = None
 

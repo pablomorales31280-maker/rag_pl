@@ -22,5 +22,6 @@ class Settings:
 
     # Génération (Transformers)
     generator_model_name: str = "google/flan-t5-base"
+    max_new_tokens: int = 200
 
 SETTINGS = Settings()

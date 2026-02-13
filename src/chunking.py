@@ -1,6 +1,6 @@
 def chunk_text(text: str, chunk_size: int, overlap: int) -> list[str]:
     """
-    Chunking simple en caractères (robuste et rapide).
+    Chunking simple en caractères
     - chunk_size : taille visée
     - overlap : chevauchement pour conserver du contexte
     """

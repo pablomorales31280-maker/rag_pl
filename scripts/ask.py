@@ -52,6 +52,7 @@ def main():
         print("    excerpt=" + (text[:280].replace("\n", " ") + ("..." if len(text) > 280 else "")))
         print()
 
+        text = text[:700]
         retrieved.append(text)
 
     # Génération
