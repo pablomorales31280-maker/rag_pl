@@ -1,0 +1,23 @@
+def chunk_text(text: str, chunk_size: int, overlap: int) -> list[str]:
+    """
+    Chunking simple en caractères (robuste et rapide).
+    - chunk_size : taille visée
+    - overlap : chevauchement pour conserver du contexte
+    """
+    if not text:
+        return []
+
+    chunks = []
+    start = 0
+    n = len(text)
+
+    while start < n:
+        end = min(start + chunk_size, n)
+        chunk = text[start:end].strip()
+        if chunk:
+            chunks.append(chunk)
+        if end == n:
+            break
+        start = max(0, end - overlap)
+
+    return chunks
